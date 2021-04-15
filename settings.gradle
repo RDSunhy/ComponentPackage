@@ -1,0 +1,10 @@
+include ':resource'
+include ':repository'
+include ':common'
+include ':component_service'
+include ':module_mine'
+include ':module_square'
+include ':module_home'
+include ':basic'
+include ':app'
+rootProject.name = "ComponentPackage"

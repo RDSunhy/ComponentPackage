@@ -1,0 +1,97 @@
+ext{
+
+    applicationId = [
+            app: "com.shy.study",
+            home: "com.shy.study.home",
+            square: "com.shy.study.square",
+            mine: "com.shy.study.mine",
+    ]
+
+    resourcePrefix = [
+            home: "home_",
+            square: "square_",
+            mine: "mine_",
+    ]
+
+    android = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.3",
+            applicationId: "com.shy.study",
+            minSdkVersion: 21,
+            targetSdkVersion: 30,
+            versionCode: 1,
+            versionName: "1.0",
+    ]
+
+    homeModule = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.3",
+            applicationId: "com.shy.study.home",
+            minSdkVersion: 21,
+            targetSdkVersion: 30,
+            versionCode: 1,
+            versionName: "1.0",
+    ]
+
+    squareModule = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.3",
+            applicationId: "com.shy.study.square",
+            minSdkVersion: 21,
+            targetSdkVersion: 30,
+            versionCode: 1,
+            versionName: "1.0",
+    ]
+
+    mineModule = [
+            compileSdkVersion: 30,
+            buildToolsVersion: "30.0.3",
+            applicationId: "com.shy.study.square",
+            minSdkVersion: 21,
+            targetSdkVersion: 30,
+            versionCode: 1,
+            versionName: "1.0",
+    ]
+
+    dependencies = [
+            //base
+            "ktStdlib": "org.jetbrains.kotlin:kotlin-stdlib:1.3.72",
+            "ktCore": 'androidx.core:core-ktx:1.3.2',
+            "collectionKtx": "androidx.collection:collection-ktx:1.1.0",
+            "coroutines": 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.9',
+            "appcompat": 'androidx.appcompat:appcompat:1.2.0',
+            "constraintlayout": 'androidx.constraintlayout:constraintlayout:2.0.4',
+            "multidex": 'androidx.multidex:multidex:2.0.1',
+            "viewmodelKtx": "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1",
+            "livedataKtx": "androidx.lifecycle:lifecycle-livedata-ktx:2.3.1",
+            "runtimeKtx": "androidx.lifecycle:lifecycle-runtime-ktx:2.3.1",
+            "material": 'com.google.android.material:material:1.2.1',
+
+            "room": "androidx.room:room-runtime:2.2.6",
+            "roomCompiler": "androidx.room:room-compiler:2.2.6",
+
+            "arouterApi": 'com.alibaba:arouter-api:1.5.1',
+            "arouterCompiler": 'com.alibaba:arouter-compiler:1.5.1',
+
+            //retrofit2
+            "retrofit": 'com.squareup.retrofit2:retrofit:2.9.0',
+            "retrofitConverterGson": 'com.squareup.retrofit2:converter-gson:2.9.0',
+            "okHttpLogger": 'com.squareup.okhttp3:logging-interceptor:4.9.1',
+
+            "utilcodex": 'com.blankj:utilcodex:1.30.6',
+
+            "loadsir": 'com.kingja.loadsir:loadsir:1.3.8',
+
+            "xxpermissions": 'com.hjq:xxpermissions:8.6',
+
+            "slideBack": 'com.github.ParfoisMeng:SlideBack:1.1.2',
+
+            "coil": 'io.coil-kt:coil:1.2.0',
+
+            "skin": 'skin.support:skin-support:4.0.5',            // skin-support
+            "skinAppcompat": 'skin.support:skin-support-appcompat:4.0.5',         // skin-support 基础控件支持
+            "skinDesign": 'skin.support:skin-support-design:4.0.5',            // skin-support-design material design 控件支持[可选]
+            "skinCardview": 'skin.support:skin-support-cardview:4.0.5',          // skin-support-cardview CardView 控件支持[可选]
+            "skinConstraintLayout": 'skin.support:skin-support-constraint-layout:4.0.5', // skin-support-constraint-layout ConstraintLayout 控件支持[可选]
+    ]
+}

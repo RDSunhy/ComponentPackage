@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#222"
+            android:textStyle="bold"
+            android:text="App主工程"/>
+
+        <Button
+            android:id="@+id/bnHome"
+            android:text="跳转Home组件"
+            android:layout_marginTop="5dp"
+            android:layout_width="@dimen/sw_400dp"
+            android:layout_height="@dimen/sw_50dp"/>
+
+        <Button
+            android:id="@+id/bnHomeA"
+            android:text="跳转Home下的Activity"
+            android:layout_marginTop="5dp"
+            android:layout_width="@dimen/sw_200dp"
+            android:layout_height="@dimen/_sw_50dp"/>
+
+        <Button
+            android:id="@+id/bnSquare"
+            android:text="跳转Square组件"
+            android:layout_marginTop="5dp"
+            android:layout_width="@dimen/sw_200dp"
+            android:layout_height="@dimen/sw_50dp"/>
+
+        <Button
+            android:id="@+id/bnMine"
+            android:text="跳转Mine组件"
+            android:layout_marginTop="5dp"
+            android:layout_width="@dimen/sw_200dp"
+            android:layout_height="@dimen/sw_50dp"/>
+
+        <Button
+            android:id="@+id/bnSkin"
+            android:text="换肤"
+            android:background="@color/purple_200"
+            android:layout_marginTop="5dp"
+            android:layout_width="@dimen/sw_200dp"
+            android:layout_height="@dimen/sw_50dp"/>
+
+        <Button
+            android:id="@+id/bnReset"
+            android:text="恢复"
+            android:background="@color/purple_200"
+            android:layout_marginTop="5dp"
+            android:layout_width="@dimen/sw_200dp"
+            android:layout_height="@dimen/sw_50dp"/>
+
+    </LinearLayout>
+</layout>

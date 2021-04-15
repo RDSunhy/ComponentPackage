@@ -1,0 +1,86 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += [
+                        "room.schemaLocation":"$projectDir/schemas".toString(),
+                        "room.incremental":"true",
+                        "room.expandProjection":"true"]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        dataBinding true
+    }
+}
+
+dependencies {
+
+    def dependencies = rootProject.ext.dependencies
+
+
+    //base
+    api dependencies.ktStdlib
+    api dependencies.ktCore
+    api dependencies.collectionKtx
+    api dependencies.coroutines
+    api dependencies.appcompat
+    api dependencies.constraintlayout
+    api dependencies.multidex
+    api dependencies.viewmodelKtx
+    api dependencies.livedataKtx
+    api dependencies.runtimeKtx
+    api dependencies.material
+
+    //ARouter
+    api dependencies.arouterApi
+    annotationProcessor dependencies.arouterCompiler
+
+    api dependencies.utilcodex
+    api dependencies.loadsir
+    api dependencies.xxpermissions
+    api dependencies.slideBack
+    api dependencies.coil
+    api dependencies.skin
+    api dependencies.skinAppcompat
+    api dependencies.skinDesign
+    api dependencies.skinCardview
+    api dependencies.skinConstraintLayout
+}
